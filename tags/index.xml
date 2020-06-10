@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on michael kehoe</title>
-    <link>http://www.example.com/tags/</link>
+    <link>https://mkehoe.github.io/tags/</link>
     <description>Recent content in Tags on michael kehoe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 26 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mkehoe.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>docker</title>
+      <link>https://mkehoe.github.io/tags/docker/</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkehoe.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>dotnet core</title>
-      <link>http://www.example.com/tags/dotnet-core/</link>
+      <link>https://mkehoe.github.io/tags/dotnet-core/</link>
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/dotnet-core/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>http://www.example.com/tags/go/</link>
-      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.example.com/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>http://www.example.com/tags/golang/</link>
-      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.example.com/tags/golang/</guid>
+      <guid>https://mkehoe.github.io/tags/dotnet-core/</guid>
       <description></description>
     </item>
     
     <item>
       <title>image processing</title>
-      <link>http://www.example.com/tags/image-processing/</link>
+      <link>https://mkehoe.github.io/tags/image-processing/</link>
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/image-processing/</guid>
+      <guid>https://mkehoe.github.io/tags/image-processing/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>ruby</title>
-      <link>http://www.example.com/tags/ruby/</link>
+      <title>mac</title>
+      <link>https://mkehoe.github.io/tags/mac/</link>
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/ruby/</guid>
+      <guid>https://mkehoe.github.io/tags/mac/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web api</title>
-      <link>http://www.example.com/tags/web-api/</link>
+      <link>https://mkehoe.github.io/tags/web-api/</link>
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/web-api/</guid>
+      <guid>https://mkehoe.github.io/tags/web-api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://mkehoe.github.io/tags/windows/</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkehoe.github.io/tags/windows/</guid>
       <description></description>
     </item>
     

@@ -3,77 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.example.com/posts/benchmarking-net-core-go-ruby-image-processing/</loc>
+    <loc>https://mkehoe.github.io/posts/benchmarking-net-core-platforms-image-processing/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/categories/</loc>
+    <loc>https://mkehoe.github.io/categories/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/categories/dotnet-core/</loc>
+    <loc>https://mkehoe.github.io/tags/docker/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/tags/dotnet-core/</loc>
+    <loc>https://mkehoe.github.io/tags/dotnet-core/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/tags/go/</loc>
+    <loc>https://mkehoe.github.io/categories/dotnet-core/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/tags/golang/</loc>
+    <loc>https://mkehoe.github.io/tags/image-processing/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/categories/golang/</loc>
+    <loc>https://mkehoe.github.io/tags/mac/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/tags/image-processing/</loc>
+    <loc>https://mkehoe.github.io/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/</loc>
+    <loc>https://mkehoe.github.io/posts/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/posts/</loc>
+    <loc>https://mkehoe.github.io/tags/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/tags/ruby/</loc>
+    <loc>https://mkehoe.github.io/tags/web-api/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/categories/ruby/</loc>
+    <loc>https://mkehoe.github.io/tags/windows/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/tags/</loc>
-    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/tags/web-api/</loc>
-    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/about/</loc>
+    <loc>https://mkehoe.github.io/about/</loc>
   </url>
   
 </urlset>

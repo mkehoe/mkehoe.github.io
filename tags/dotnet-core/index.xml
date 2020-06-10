@@ -2,22 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dotnet core on michael kehoe</title>
-    <link>http://www.example.com/tags/dotnet-core/</link>
+    <link>https://mkehoe.github.io/tags/dotnet-core/</link>
     <description>Recent content in dotnet core on michael kehoe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 26 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.example.com/tags/dotnet-core/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mkehoe.github.io/tags/dotnet-core/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Benchmarking .Net Core, Go, and Ruby Image Processing</title>
-      <link>http://www.example.com/posts/benchmarking-net-core-go-ruby-image-processing/</link>
+      <title>Benchmarking .Net Core Platforms for Image Processing</title>
+      <link>https://mkehoe.github.io/posts/benchmarking-net-core-platforms-image-processing/</link>
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/posts/benchmarking-net-core-go-ruby-image-processing/</guid>
-      <description>Test foo!</description>
+      <guid>https://mkehoe.github.io/posts/benchmarking-net-core-platforms-image-processing/</guid>
+      <description>Recently I had to build a CMS that had a web api that handled some image manipulations for the frontend. The project I was working on was already in .Net Core, so with the new cross platform support I wondered about the performance of it.
+There are a lot of benchmarks around image resizing. My needs were a little more complicated, so there are 2 benchmarks: resizing and tiling in the context of web api.</description>
     </item>
     
   </channel>
