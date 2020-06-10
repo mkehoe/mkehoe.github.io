@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on michael kehoe</title>
+    <link>http://www.example.com/tags/golang/</link>
+    <description>Recent content in golang on michael kehoe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Benchmarking .Net Core, Go, and Ruby Image Processing</title>
+      <link>http://www.example.com/posts/benchmarking-net-core-go-ruby-image-processing/</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/posts/benchmarking-net-core-go-ruby-image-processing/</guid>
+      <description>Test foo!</description>
+    </item>
+    
+  </channel>
+</rss>
