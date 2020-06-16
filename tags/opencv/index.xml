@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>image processing on michael kehoe</title>
-    <link>https://mkehoe.github.io/tags/image-processing/</link>
-    <description>Recent content in image processing on michael kehoe</description>
+    <title>opencv on michael kehoe</title>
+    <link>https://mkehoe.github.io/tags/opencv/</link>
+    <description>Recent content in opencv on michael kehoe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mkehoe.github.io/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mkehoe.github.io/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       
       <guid>https://mkehoe.github.io/posts/word-face-algorithm/</guid>
       <description>In another life when I worked for a photobooth company, I was doing a lot of &amp;ldquo;creative coding&amp;rdquo; and one of the more interesting projects I worked on back then involved manipulating words into a portrait of an individual. This is probably the only project I ever agreed to that I had no idea how I was going to complete it. The algorithm wasn&amp;rsquo;t perfect artistically, but it was good enough that we ended up using this for a few marketing campaigns so I thought I would detail it here.</description>
-    </item>
-    
-    <item>
-      <title>Benchmarking .Net Core Platforms for Image Processing</title>
-      <link>https://mkehoe.github.io/posts/benchmarking-net-core-platforms-image-processing/</link>
-      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mkehoe.github.io/posts/benchmarking-net-core-platforms-image-processing/</guid>
-      <description>Recently I had to build a CMS that had a web api that handled some image manipulations for the frontend. The project I was working on was already in .Net Core, so with the new cross platform support I wondered about the performance of it.
-There are a lot of benchmarks around image resizing. My needs were a little more complicated, so there are 2 benchmarks: resizing and tiling in the context of web api.</description>
     </item>
     
   </channel>

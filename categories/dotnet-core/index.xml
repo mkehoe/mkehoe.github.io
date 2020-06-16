@@ -6,7 +6,7 @@
     <description>Recent content in dotnet core on michael kehoe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mkehoe.github.io/categories/dotnet-core/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Benchmarking .Net Core Platforms for Image Processing</title>
       <link>https://mkehoe.github.io/posts/benchmarking-net-core-platforms-image-processing/</link>
-      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://mkehoe.github.io/posts/benchmarking-net-core-platforms-image-processing/</guid>
       <description>Recently I had to build a CMS that had a web api that handled some image manipulations for the frontend. The project I was working on was already in .Net Core, so with the new cross platform support I wondered about the performance of it.
