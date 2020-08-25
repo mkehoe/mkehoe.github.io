@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mac on michael kehoe</title>
-    <link>https://mkehoe.github.io/tags/mac/</link>
+    <link>https://mkehoe.dev/tags/mac/</link>
     <description>Recent content in mac on michael kehoe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mkehoe.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mkehoe.dev/tags/mac/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Benchmarking Go Platforms for Image Processing</title>
-      <link>https://mkehoe.github.io/posts/benchmarking-go-platforms-image-processing/</link>
+      <link>https://mkehoe.dev/posts/benchmarking-go-platforms-image-processing/</link>
       <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mkehoe.github.io/posts/benchmarking-go-platforms-image-processing/</guid>
+      <guid>https://mkehoe.dev/posts/benchmarking-go-platforms-image-processing/</guid>
       <description>In a previous post, I performed a bunch of benchmarking on .Net Core for different platforms. Since Go is all the rage these days and I haven&amp;rsquo;t had the pleasure of testing it out yet, I decided to extend this benchmarking to an Api built with Go 1.14.
 Benchmarks The test setup is exactly the same, a Macbook Pro dual booting Windows and MacOS with both OS&amp;rsquo;s running docker. For this benchmark, the Go Api is designed to match the .</description>
     </item>
     
     <item>
       <title>Benchmarking .Net Core Platforms for Image Processing</title>
-      <link>https://mkehoe.github.io/posts/benchmarking-net-core-platforms-image-processing/</link>
+      <link>https://mkehoe.dev/posts/benchmarking-net-core-platforms-image-processing/</link>
       <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mkehoe.github.io/posts/benchmarking-net-core-platforms-image-processing/</guid>
+      <guid>https://mkehoe.dev/posts/benchmarking-net-core-platforms-image-processing/</guid>
       <description>Recently I had to build a CMS that had a web api that handled some image manipulations for the frontend. The project I was working on was already in .Net Core, so with the new cross platform support I wondered about the performance of it.
 There are a lot of benchmarks around image resizing. My needs were a little more complicated, so there are 2 benchmarks: resizing and tiling in the context of web api.</description>
     </item>

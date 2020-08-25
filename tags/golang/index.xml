@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>golang on michael kehoe</title>
-    <link>https://mkehoe.github.io/tags/golang/</link>
+    <link>https://mkehoe.dev/tags/golang/</link>
     <description>Recent content in golang on michael kehoe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mkehoe.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mkehoe.dev/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Benchmarking Go Platforms for Image Processing</title>
-      <link>https://mkehoe.github.io/posts/benchmarking-go-platforms-image-processing/</link>
+      <link>https://mkehoe.dev/posts/benchmarking-go-platforms-image-processing/</link>
       <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mkehoe.github.io/posts/benchmarking-go-platforms-image-processing/</guid>
+      <guid>https://mkehoe.dev/posts/benchmarking-go-platforms-image-processing/</guid>
       <description>In a previous post, I performed a bunch of benchmarking on .Net Core for different platforms. Since Go is all the rage these days and I haven&amp;rsquo;t had the pleasure of testing it out yet, I decided to extend this benchmarking to an Api built with Go 1.14.
 Benchmarks The test setup is exactly the same, a Macbook Pro dual booting Windows and MacOS with both OS&amp;rsquo;s running docker. For this benchmark, the Go Api is designed to match the .</description>
     </item>

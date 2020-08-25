@@ -18,20 +18,20 @@ Benchmarks The test setup is exactly the same, a Macbook Pro dual booting Window
 <meta property="og:description" content="In a previous post, I performed a bunch of benchmarking on .Net Core for different platforms. Since Go is all the rage these days and I haven&rsquo;t had the pleasure of testing it out yet, I decided to extend this benchmarking to an Api built with Go 1.14.
 Benchmarks The test setup is exactly the same, a Macbook Pro dual booting Windows and MacOS with both OS&rsquo;s running docker. For this benchmark, the Go Api is designed to match the ." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mkehoe.github.io/posts/benchmarking-go-platforms-image-processing/" />
+<meta property="og:url" content="https://mkehoe.dev/posts/benchmarking-go-platforms-image-processing/" />
 <meta property="article:published_time" content="2020-07-21T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-07-21T00:00:00+00:00" />
 
 
     
-      <base href="https://mkehoe.github.io/posts/benchmarking-go-platforms-image-processing/">
+      <base href="https://mkehoe.dev/posts/benchmarking-go-platforms-image-processing/">
     
     <title>
   Benchmarking Go Platforms for Image Processing · michael kehoe
 </title>
 
     
-      <link rel="canonical" href="https://mkehoe.github.io/posts/benchmarking-go-platforms-image-processing/">
+      <link rel="canonical" href="https://mkehoe.dev/posts/benchmarking-go-platforms-image-processing/">
     
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
@@ -41,7 +41,7 @@ Benchmarks The test setup is exactly the same, a Macbook Pro dual booting Window
     
       
       
-      <link rel="stylesheet" href="https://mkehoe.github.io/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="https://mkehoe.dev/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -54,10 +54,10 @@ Benchmarks The test setup is exactly the same, a Macbook Pro dual booting Window
 
     
 
-    <link rel="icon" type="image/png" href="https://mkehoe.github.io/img/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://mkehoe.github.io/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://mkehoe.dev/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://mkehoe.dev/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.72.0" />
+    <meta name="generator" content="Hugo 0.74.3" />
   </head>
 
   
@@ -66,7 +66,7 @@ Benchmarks The test setup is exactly the same, a Macbook Pro dual booting Window
     <main class="wrapper">
       <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="https://mkehoe.github.io/">
+    <a class="navigation-title" href="https://mkehoe.dev/">
       michael kehoe
     </a>
     
@@ -76,11 +76,11 @@ Benchmarks The test setup is exactly the same, a Macbook Pro dual booting Window
       
         
           <li class="navigation-item">
-            <a class="navigation-link" href="https://mkehoe.github.io/posts/">Blog</a>
+            <a class="navigation-link" href="https://mkehoe.dev/posts/">Blog</a>
           </li>
         
           <li class="navigation-item">
-            <a class="navigation-link" href="https://mkehoe.github.io/about/">About</a>
+            <a class="navigation-link" href="https://mkehoe.dev/about/">About</a>
           </li>
         
       
@@ -114,21 +114,21 @@ Benchmarks The test setup is exactly the same, a Macbook Pro dual booting Window
           </div>
           <div class="categories">
   <i class="fas fa-folder"></i>
-    <a href="https://mkehoe.github.io/categories/golang/">golang</a></div>
+    <a href="https://mkehoe.dev/categories/golang/">golang</a></div>
 
           <div class="tags">
   <i class="fas fa-tag"></i>
-    <a href="https://mkehoe.github.io/tags/golang/">golang</a>
+    <a href="https://mkehoe.dev/tags/golang/">golang</a>
       <span class="separator">•</span>
-    <a href="https://mkehoe.github.io/tags/image-processing/">image processing</a>
+    <a href="https://mkehoe.dev/tags/image-processing/">image processing</a>
       <span class="separator">•</span>
-    <a href="https://mkehoe.github.io/tags/web-api/">web api</a>
+    <a href="https://mkehoe.dev/tags/web-api/">web api</a>
       <span class="separator">•</span>
-    <a href="https://mkehoe.github.io/tags/mac/">mac</a>
+    <a href="https://mkehoe.dev/tags/mac/">mac</a>
       <span class="separator">•</span>
-    <a href="https://mkehoe.github.io/tags/windows/">windows</a>
+    <a href="https://mkehoe.dev/tags/windows/">windows</a>
       <span class="separator">•</span>
-    <a href="https://mkehoe.github.io/tags/docker/">docker</a></div>
+    <a href="https://mkehoe.dev/tags/docker/">docker</a></div>
 
         </div>
       </header>
@@ -416,6 +416,19 @@ Benchmarks The test setup is exactly the same, a Macbook Pro dual booting Window
     </main>
 
     
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-175643983-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
   </body>
 
