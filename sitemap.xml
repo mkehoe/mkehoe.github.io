@@ -3,12 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mkehoe.dev/posts/benchmarking-go-platforms-image-processing/</loc>
-    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
+    <loc>https://mkehoe.dev/tags/c&#43;&#43;/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mkehoe.dev/categories/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mkehoe.dev/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mkehoe.dev/posts/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mkehoe.dev/tags/qt/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mkehoe.dev/categories/qt/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mkehoe.dev/posts/qt-problems/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mkehoe.dev/tags/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mkehoe.dev/posts/benchmarking-go-platforms-image-processing/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -34,21 +69,6 @@
   
   <url>
     <loc>https://mkehoe.dev/tags/mac/</loc>
-    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mkehoe.dev/</loc>
-    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mkehoe.dev/posts/</loc>
-    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mkehoe.dev/tags/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url>
   

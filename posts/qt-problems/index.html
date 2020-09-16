@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Michael Kehoe">
+    <meta name="description" content="Michael Kehoe&#39;s personal website">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Qt Problems"/>
+<meta name="twitter:description" content="Recently I have been working a bunch with Qt and while every framework has is pro&rsquo;s and con&rsquo;s, this week&rsquo;s dealings with it have been particularly frustrating. Qt&rsquo;s strength is that it offers more features than most C&#43;&#43; GUI frameworks, but sometimes it seems that details are overlooked with their implementations. After wasting a ton of time on one of their minor &ldquo;quirks&rdquo; this week, just needed vent on some of their shortcomings."/>
+
+    <meta property="og:title" content="Qt Problems" />
+<meta property="og:description" content="Recently I have been working a bunch with Qt and while every framework has is pro&rsquo;s and con&rsquo;s, this week&rsquo;s dealings with it have been particularly frustrating. Qt&rsquo;s strength is that it offers more features than most C&#43;&#43; GUI frameworks, but sometimes it seems that details are overlooked with their implementations. After wasting a ton of time on one of their minor &ldquo;quirks&rdquo; this week, just needed vent on some of their shortcomings." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mkehoe.dev/posts/qt-problems/" />
+<meta property="article:published_time" content="2020-09-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-11T00:00:00+00:00" />
+
+
+    
+      <base href="https://mkehoe.dev/posts/qt-problems/">
+    
+    <title>
+  Qt Problems · michael kehoe
+</title>
+
+    
+      <link rel="canonical" href="https://mkehoe.dev/posts/qt-problems/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://mkehoe.dev/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://mkehoe.dev/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://mkehoe.dev/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.74.3" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://mkehoe.dev/">
+      michael kehoe
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://mkehoe.dev/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://mkehoe.dev/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Qt Problems</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-09-11T00:00:00Z'>
+                September 11, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              2-minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="https://mkehoe.dev/categories/qt/">qt</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://mkehoe.dev/tags/c&#43;&#43;/">c&#43;&#43;</a>
+      <span class="separator">•</span>
+    <a href="https://mkehoe.dev/tags/qt/">qt</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        <p>Recently I have been working a bunch with Qt and while every framework has is pro&rsquo;s and con&rsquo;s, this week&rsquo;s dealings with it have been particularly frustrating. Qt&rsquo;s strength is that it offers more features than most C++ GUI frameworks, but sometimes it seems that details are overlooked with their implementations. After wasting a ton of time on one of their minor &ldquo;quirks&rdquo; this week, just needed vent on some of their shortcomings.</p>
+<p>Qt has two ways of constructing a UI for an application: Qt Widgets and Qt Quick (Qml). I inherited a legacy project that is based on the widgets framework which appears to be the older, original framework. These days, Qt seems to give all the love to the qml framework. I don&rsquo;t want to make it seem like the widgets aren&rsquo;t maintained, but qml has more to offer. For example, material theme is only available for qml. A <a href="https://github.com/laserpants/qt-material-widgets">third party option</a> exists but it has been idle for 2 years.</p>
+<p>Another issue I have is that the default build is missing a key component for the web kit so I need to cut a custom build. With out the proprietary codecs switch on the build, the web kit is not able to handle standard H264 videos. As of now H264 is the most common option for web video, though it is very patent hindered so I am guessing their reason for leaving it out is legal.</p>
+<p>Building a custom version isn&rsquo;t the worst thing, but I ended up wasting several hours on one oddity. The build procedure is fairly well <a href="https://doc.qt.io/qt-5/build-sources.html">documented</a> and I chose to build it from <a href="https://wiki.qt.io/Building_Qt_5_from_Git">git</a>. Qt&rsquo;s code is all stored on code.qt.io however they also have repositories on github that mostly mirror the qt.io site, and I say mostly because building from github is broken. This issue is related to this [infrastructure bug]{(<a href="https://bugreports.qt.io/browse/QTQAINFRA-3384">https://bugreports.qt.io/browse/QTQAINFRA-3384</a>) though github was never addressed in the fix. I suppose the real question is why bother maintaining two separate repositories?</p>
+<p>I do think Qt has a lot of positives, but the negatives such as the above mentioned quirks and the recent push away from open source would definitely cause me to look at other options in the future.</p>
+
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2020
+      
+       Michael Kehoe 
+    
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-175643983-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c&#43;&#43; on michael kehoe</title>
+    <link>https://mkehoe.dev/tags/c&#43;&#43;/</link>
+    <description>Recent content in c&#43;&#43; on michael kehoe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 11 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mkehoe.dev/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Qt Problems</title>
+      <link>https://mkehoe.dev/posts/qt-problems/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkehoe.dev/posts/qt-problems/</guid>
+      <description>Recently I have been working a bunch with Qt and while every framework has is pro&amp;rsquo;s and con&amp;rsquo;s, this week&amp;rsquo;s dealings with it have been particularly frustrating. Qt&amp;rsquo;s strength is that it offers more features than most C++ GUI frameworks, but sometimes it seems that details are overlooked with their implementations. After wasting a ton of time on one of their minor &amp;ldquo;quirks&amp;rdquo; this week, just needed vent on some of their shortcomings.</description>
+    </item>
+    
+  </channel>
+</rss>
