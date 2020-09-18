@@ -10,26 +10,28 @@
     <meta name="keywords" content="blog,developer,personal">
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Qt Problems"/>
-<meta name="twitter:description" content="Recently I have been working a bunch with Qt and while every framework has is pro&rsquo;s and con&rsquo;s, this week&rsquo;s dealings with it have been particularly frustrating. Qt&rsquo;s strength is that it offers more features than most C&#43;&#43; GUI frameworks, but sometimes it seems that details are overlooked with their implementations. After wasting a ton of time on one of their minor &ldquo;quirks&rdquo; this week, just needed vent on some of their shortcomings."/>
+<meta name="twitter:title" content="Funky Multiply in C"/>
+<meta name="twitter:description" content="A few weeks ago I saw an ingenious way to multiply in C and can&rsquo;t stop thinking about it. If you want to write insane code to trip up a code reviewer up, here is some bizarre code for a multiplication:
+int p = sizeof(char[a][b]); There is a couple mildly interesting things about this. First, this will not compile in Visual Studio. Array declarations with non-consts is part of the C99 spec, but VS only supports either C89/C90 or C99 features also defined in the C&#43;&#43; standard."/>
 
-    <meta property="og:title" content="Qt Problems" />
-<meta property="og:description" content="Recently I have been working a bunch with Qt and while every framework has is pro&rsquo;s and con&rsquo;s, this week&rsquo;s dealings with it have been particularly frustrating. Qt&rsquo;s strength is that it offers more features than most C&#43;&#43; GUI frameworks, but sometimes it seems that details are overlooked with their implementations. After wasting a ton of time on one of their minor &ldquo;quirks&rdquo; this week, just needed vent on some of their shortcomings." />
+    <meta property="og:title" content="Funky Multiply in C" />
+<meta property="og:description" content="A few weeks ago I saw an ingenious way to multiply in C and can&rsquo;t stop thinking about it. If you want to write insane code to trip up a code reviewer up, here is some bizarre code for a multiplication:
+int p = sizeof(char[a][b]); There is a couple mildly interesting things about this. First, this will not compile in Visual Studio. Array declarations with non-consts is part of the C99 spec, but VS only supports either C89/C90 or C99 features also defined in the C&#43;&#43; standard." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mkehoe.dev/posts/qt-problems/" />
-<meta property="article:published_time" content="2020-09-11T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-11T00:00:00+00:00" />
+<meta property="og:url" content="https://mkehoe.dev/posts/funky-multiply/" />
+<meta property="article:published_time" content="2020-09-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-17T00:00:00+00:00" />
 
 
     
-      <base href="https://mkehoe.dev/posts/qt-problems/">
+      <base href="https://mkehoe.dev/posts/funky-multiply/">
     
     <title>
-  Qt Problems · michael kehoe
+  Funky Multiply in C · michael kehoe
 </title>
 
     
-      <link rel="canonical" href="https://mkehoe.dev/posts/qt-problems/">
+      <link rel="canonical" href="https://mkehoe.dev/posts/funky-multiply/">
     
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
@@ -95,40 +97,49 @@
     <article>
       <header>
         <div class="post-title">
-          <h1 class="title">Qt Problems</h1>
+          <h1 class="title">Funky Multiply in C</h1>
         </div>
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
               <i class="fas fa-calendar"></i>
-              <time datetime='2020-09-11T00:00:00Z'>
-                September 11, 2020
+              <time datetime='2020-09-17T00:00:00Z'>
+                September 17, 2020
               </time>
             </span>
             <span class="reading-time">
               <i class="fas fa-clock"></i>
-              2-minute read
+              1-minute read
             </span>
           </div>
           <div class="categories">
   <i class="fas fa-folder"></i>
-    <a href="https://mkehoe.dev/categories/qt/">qt</a></div>
+    <a href="https://mkehoe.dev/categories/c/">c</a></div>
 
           <div class="tags">
   <i class="fas fa-tag"></i>
-    <a href="https://mkehoe.dev/tags/c&#43;&#43;/">c&#43;&#43;</a>
+    <a href="https://mkehoe.dev/tags/c/">c</a>
       <span class="separator">•</span>
-    <a href="https://mkehoe.dev/tags/qt/">qt</a></div>
+    <a href="https://mkehoe.dev/tags/asm/">asm</a></div>
 
         </div>
       </header>
 
       <div>
-        <p>Recently I have been working a bunch with Qt and while every framework has is pro&rsquo;s and con&rsquo;s, this week&rsquo;s dealings with it have been particularly frustrating. Qt&rsquo;s strength is that it offers more features than most C++ GUI frameworks, but sometimes it seems that details are overlooked with their implementations. After wasting a ton of time on one of their minor &ldquo;quirks&rdquo; this week, just needed vent on some of their shortcomings.</p>
-<p>Qt has two ways of constructing a UI for an application: Qt Widgets and Qt Quick (Qml). I inherited a legacy project that is based on the widgets framework which appears to be the older, original framework. These days, Qt seems to give all the love to the qml framework. I don&rsquo;t want to make it seem like the widgets aren&rsquo;t maintained, but qml has more to offer. For example, material theme is only available for qml. A <a href="https://github.com/laserpants/qt-material-widgets">third party option</a> exists but it has been idle for 2 years.</p>
-<p>Another issue I have is that the default build is missing a key component for the web kit so I need to cut a custom build. With out the proprietary codecs switch on the build, the web kit is not able to handle standard H264 videos. As of now H264 is the most common option for web video, though it is very patent hindered so I am guessing their reason for leaving it out is legal.</p>
-<p>Building a custom version isn&rsquo;t the worst thing, but I ended up wasting several hours on one oddity. The build procedure is fairly well <a href="https://doc.qt.io/qt-5/build-sources.html">documented</a> and I chose to build it from <a href="https://wiki.qt.io/Building_Qt_5_from_Git">git</a>. Qt&rsquo;s code is all stored on code.qt.io however they also have repositories on github that mostly mirror the qt.io site, and I say mostly because building from github is broken. This issue is related to this <a href="https://bugreports.qt.io/browse/QTQAINFRA-3384">infrastructure bug</a> though github was never addressed in the fix. I suppose the real question is why bother maintaining two separate repositories?</p>
-<p>I do think Qt has a lot of positives, but the negatives such as the above mentioned quirks and the recent push away from open source would definitely cause me to look at other options in the future.</p>
+        <p>A few weeks ago I saw an ingenious way to multiply in C and can&rsquo;t stop thinking about it. If you want to write insane code to trip up a code reviewer up, here is some bizarre code for a multiplication:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">int p = sizeof(char[a][b]);
+</code></pre></div><p>There is a couple mildly interesting things about this. First, this will not compile in Visual Studio. Array declarations with non-consts is part of the C99 spec, but VS only supports either C89/C90 or C99 features also defined in the C++ standard.</p>
+<p>This does compile fine with the clang and gcc compilers. With the x64-86 gcc 10.2 the asm generated looks like this:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mov     edx, DWORD PTR [rbp-24]
+mov     eax, DWORD PTR [rbp-20]
+imul    eax, edx
+mov     DWORD PTR [rbp-4], eax
+</code></pre></div><p>And that looks eerily similar to the standard way to multiply:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mov     eax, DWORD PTR [rbp-20]
+imul    eax, DWORD PTR [rbp-24]
+mov     DWORD PTR [rbp-4], eax
+</code></pre></div><p>Interestingly enough, the compiler is smart enough to use the same imul instruction for both of these.</p>
+<p>PS. Shout out to godbolt.org and the great work they have done in making it easy to see how code compiles to asm.</p>
 
       </div>
 

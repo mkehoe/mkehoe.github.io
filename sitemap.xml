@@ -3,22 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mkehoe.dev/tags/c&#43;&#43;/</loc>
-    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+    <loc>https://mkehoe.dev/tags/asm/</loc>
+    <lastmod>2020-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mkehoe.dev/tags/c/</loc>
+    <lastmod>2020-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mkehoe.dev/categories/c/</loc>
+    <lastmod>2020-09-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mkehoe.dev/categories/</loc>
-    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mkehoe.dev/posts/funky-multiply/</loc>
+    <lastmod>2020-09-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mkehoe.dev/</loc>
-    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mkehoe.dev/posts/</loc>
+    <lastmod>2020-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mkehoe.dev/tags/</loc>
+    <lastmod>2020-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mkehoe.dev/tags/c&#43;&#43;/</loc>
     <lastmod>2020-09-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -34,11 +59,6 @@
   
   <url>
     <loc>https://mkehoe.dev/posts/qt-problems/</loc>
-    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mkehoe.dev/tags/</loc>
     <lastmod>2020-09-11T00:00:00+00:00</lastmod>
   </url>
   

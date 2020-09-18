@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c on michael kehoe</title>
+    <link>https://mkehoe.dev/tags/c/</link>
+    <description>Recent content in c on michael kehoe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 17 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mkehoe.dev/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Funky Multiply in C</title>
+      <link>https://mkehoe.dev/posts/funky-multiply/</link>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkehoe.dev/posts/funky-multiply/</guid>
+      <description>A few weeks ago I saw an ingenious way to multiply in C and can&amp;rsquo;t stop thinking about it. If you want to write insane code to trip up a code reviewer up, here is some bizarre code for a multiplication:
+int p = sizeof(char[a][b]); There is a couple mildly interesting things about this. First, this will not compile in Visual Studio. Array declarations with non-consts is part of the C99 spec, but VS only supports either C89/C90 or C99 features also defined in the C++ standard.</description>
+    </item>
+    
+  </channel>
+</rss>
